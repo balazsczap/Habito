@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "931256015025",
-    "firebase_url": "https://habito-1122b.firebaseio.com",
-    "project_id": "habito-1122b",
-    "storage_bucket": "habito-1122b.appspot.com"
+    "project_number": "601964831872",
+    "firebase_url": "https://habito-ecf7f.firebaseio.com",
+    "project_id": "habito-ecf7f",
+    "storage_bucket": "habito-ecf7f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:931256015025:android:8a713900c4d488c0",
+        "mobilesdk_app_id": "1:601964831872:android:8a713900c4d488c0",
         "android_client_info": {
           "package_name": "com.ivanmagda.habito"
         }
       },
       "oauth_client": [
         {
-          "client_id": "931256015025-ih0s13ph9urjacpdkh0uqbape4865o1r.apps.googleusercontent.com",
+          "client_id": "601964831872-r4odd574rg2bctpvjpl4dlnbnd013ecj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ivanmagda.habito",
+            "certificate_hash": "f386363f45f56b929c1fca0b17595ba5ef80920e"
+          }
+        },
+        {
+          "client_id": "601964831872-vl5nb1qqcj71p5l1f9ik321frqbqh8er.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAujPGYqwWyYTfTPwzlfSEwGB0hGFOaBX4"
+          "current_key": "AIzaSyBKnP9Jx8Q9QbXOFi736gsjICgwXc0nx9c"
         }
       ],
       "services": {
@@ -32,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "931256015025-ih0s13ph9urjacpdkh0uqbape4865o1r.apps.googleusercontent.com",
+              "client_id": "601964831872-vl5nb1qqcj71p5l1f9ik321frqbqh8er.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
