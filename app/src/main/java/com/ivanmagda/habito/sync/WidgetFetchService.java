@@ -48,6 +48,10 @@ public class WidgetFetchService extends Service {
                     processOnDataChange(dataSnapshot);
                 }
 
+                /**
+                 * Needed for ValueEventListener
+                 *
+                 */
                 @Override
                 public void onCancelled(DatabaseError databaseError) {
                 }
