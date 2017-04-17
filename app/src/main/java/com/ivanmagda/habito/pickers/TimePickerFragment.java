@@ -23,7 +23,9 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
     public static final String HOUR_EXTRA_KEY = "hour";
     public static final String MINUTES_EXTRA_KEY = "minutes";
 
-    private static final String TAG = "TimePickerFragment";
+    private int mHour;
+    private int mMinutes;
+    private OnTimeSetListener mOnTimeSetListener;
 
     /**
      * The callback interface used to indicate the user is done filling in
@@ -40,10 +42,6 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
 
         void onCancel();
     }
-
-    private OnTimeSetListener mOnTimeSetListener;
-    private int mHour;
-    private int mMinutes;
 
     public static TimePickerFragment newInstance(int hour, int minutes) {
         TimePickerFragment timePickerFragment = new TimePickerFragment();

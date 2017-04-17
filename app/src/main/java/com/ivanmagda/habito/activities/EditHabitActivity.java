@@ -42,8 +42,6 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
     public static final String EDIT_HABIT_RESULT = "com.ivanmagda.habito.activities.edit_result";
     public static final String EDIT_HABIT_EXTRA_KEY = "com.ivanmagda.habito.activities.edit";
 
-    private static final String TAG = "EditHabitActivity";
-
     @BindView(R.id.et_habit_name)
     protected EditText nameEditText;
 
@@ -129,9 +127,8 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
 
 
             /**
-             * The Adapter has to implement onNothingSelected.
+             * Because EditHabitActivity implements OnItemSelectedListener
              *
-             * Empty method body
              */
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -177,6 +174,9 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
                 nameEditText.setTextColor(color);
             }
 
+            /**
+             * Needed for ColorPicker.OnChooseColorListener
+             */
             @Override
             public void onCancel() {
             }

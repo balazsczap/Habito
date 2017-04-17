@@ -42,10 +42,6 @@ public final class HabitList {
         sort();
     }
 
-    public HabitList(List<Habit> habits) {
-        this(habits, SortOrder.NAME);
-    }
-
     public List<Habit> getHabits() {
         return mHabits;
     }
@@ -89,6 +85,10 @@ public final class HabitList {
                 // Sort in decreasing order.
                 Collections.sort(mHabits, new SortByDate());
                 Collections.reverse(mHabits);
+                break;
+            //default: sort by name
+            default:
+                Collections.sort(mHabits, new SortByName());
                 break;
         }
     }

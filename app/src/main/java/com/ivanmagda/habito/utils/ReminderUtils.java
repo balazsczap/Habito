@@ -14,8 +14,6 @@ import java.util.List;
 
 public class ReminderUtils {
 
-    private static final String TAG = "ReminderUtils";
-
     public static final String HABIT_EXTRA_KEY = "habit";
 
     private static PendingIntent buildPendingIntent(@NonNull final Habit habit,
@@ -26,7 +24,7 @@ public class ReminderUtils {
                 alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-    public static void setAlarm(@NonNull final Habit habit, @NonNull final Context context) {
+    private static void setAlarm(@NonNull final Habit habit, @NonNull final Context context) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         PendingIntent pendingIntent = buildPendingIntent(habit, context);
 
@@ -51,7 +49,7 @@ public class ReminderUtils {
         }
     }
 
-    public static void cancelAlarm(@NonNull final Habit habit, @NonNull final Context context) {
+    private static void cancelAlarm(@NonNull final Habit habit, @NonNull final Context context) {
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         PendingIntent pendingIntent = buildPendingIntent(habit, context);
         alarmManager.cancel(pendingIntent);

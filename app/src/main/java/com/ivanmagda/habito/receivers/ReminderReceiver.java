@@ -10,9 +10,6 @@ import com.ivanmagda.habito.utils.ReminderUtils;
 
 public class ReminderReceiver extends BroadcastReceiver {
 
-    public ReminderReceiver() {
-    }
-
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.hasExtra(ReminderUtils.HABIT_EXTRA_KEY)) {

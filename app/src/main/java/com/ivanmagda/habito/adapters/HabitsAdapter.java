@@ -21,6 +21,9 @@ import butterknife.ButterKnife;
 
 public final class HabitsAdapter extends RecyclerView.Adapter<HabitsAdapter.HabitAdapterViewHolder> {
 
+    private HabitList mHabitList;
+    private HabitAdapterOnClickListener mClickListener;
+
     /**
      * The interface that receives onClick messages.
      */
@@ -32,9 +35,6 @@ public final class HabitsAdapter extends RecyclerView.Adapter<HabitsAdapter.Habi
         void onClick(Habit selectedHabit, int position);
     }
 
-    private HabitList mHabitList;
-    private HabitAdapterOnClickListener mClickListener;
-
     /**
      * Creates a HabitsAdapter.
      *
@@ -42,7 +42,7 @@ public final class HabitsAdapter extends RecyclerView.Adapter<HabitsAdapter.Habi
      * @param clickListener The on-click handler for this adapter. This single handler is called
      *                      when an item is clicked.
      */
-    public HabitsAdapter(@NonNull HabitList habitList,
+    private HabitsAdapter(@NonNull HabitList habitList,
                          @Nullable HabitAdapterOnClickListener clickListener) {
         this.mHabitList = habitList;
         this.mClickListener = clickListener;
@@ -110,13 +110,13 @@ public final class HabitsAdapter extends RecyclerView.Adapter<HabitsAdapter.Habi
     class HabitAdapterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         @BindView(R.id.tv_list_item_habit_title)
-        TextView nameTextView;
+        protected TextView nameTextView;
 
         @BindView(R.id.tv_list_item_reset_period)
-        TextView resetPeriodTextView;
+        protected TextView resetPeriodTextView;
 
         @BindView(R.id.tv_list_item_count)
-        TextView countTextView;
+        protected TextView countTextView;
 
         private HabitListItemViewModel mViewModel;
 
