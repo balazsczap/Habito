@@ -42,8 +42,6 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
     public static final String EDIT_HABIT_RESULT = "com.ivanmagda.habito.activities.edit_result";
     public static final String EDIT_HABIT_EXTRA_KEY = "com.ivanmagda.habito.activities.edit";
 
-    private static final String TAG = "EditHabitActivity";
-
     @BindView(R.id.et_habit_name)
     protected EditText nameEditText;
 

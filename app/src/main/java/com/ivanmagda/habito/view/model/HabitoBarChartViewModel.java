@@ -15,11 +15,9 @@ import com.ivanmagda.habito.utils.HabitoStringUtils;
 
 public class HabitoBarChartViewModel {
 
-    private Habit mHabit;
     private HabitoBarChartRange.DateRange mDateRange;
 
-    public HabitoBarChartViewModel(Habit habit, HabitoBarChartRange.DateRange dateRange) {
-        this.mHabit = habit;
+    public HabitoBarChartViewModel(HabitoBarChartRange.DateRange dateRange) {
         this.mDateRange = dateRange;
     }
 

@@ -23,8 +23,6 @@ public class TimePickerFragment extends DialogFragment implements TimePickerDial
     public static final String HOUR_EXTRA_KEY = "hour";
     public static final String MINUTES_EXTRA_KEY = "minutes";
 
-    private static final String TAG = "TimePickerFragment";
-
     private int mHour;
     private int mMinutes;
     private OnTimeSetListener mOnTimeSetListener;

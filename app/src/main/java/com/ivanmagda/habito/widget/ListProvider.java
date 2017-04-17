@@ -20,7 +20,7 @@ public class ListProvider implements RemoteViewsService.RemoteViewsFactory {
     private List<Habit> mHabitList = new ArrayList<>();
     private Context mContext = null;
 
-    public ListProvider(Context context, Intent intent) {
+    public ListProvider(Context context) {
         this.mContext = context;
         populateListItem();
     }
