@@ -41,20 +41,18 @@ public final class HabitRecord implements Parcelable {
         this.checkmarks = new ArrayList<>();
     }
 
-    public HabitRecord(String userId, long createdAt, String name, int color, int target,
-                       String resetFreq, long resetTimestamp, int reminderHour, int reminderMin,
-                       int score, List<Long> checkmarks) {
-        this.userId = userId;
-        this.createdAt = createdAt;
-        this.name = name;
-        this.color = color;
-        this.target = target;
-        this.resetFreq = resetFreq;
-        this.resetTimestamp = resetTimestamp;
-        this.reminderHour = reminderHour;
-        this.reminderMin = reminderMin;
-        this.score = score;
-        this.checkmarks = checkmarks;
+    public HabitRecord(HabitRecordParameterObject paramObject) {
+        this.userId = paramObject.getUserId();
+        this.createdAt = paramObject.getCreatedAt();
+        this.name = paramObject.getName();
+        this.color = paramObject.getColor();
+        this.target = paramObject.getTarget();
+        this.resetFreq = paramObject.getResetFreq();
+        this.resetTimestamp = paramObject.getResetTimestamp();
+        this.reminderHour = paramObject.getReminderHour();
+        this.reminderMin = paramObject.getReminderMin();
+        this.score = paramObject.getScore();
+        this.checkmarks = paramObject.getCheckmarks();
     }
 
     public HabitRecord(Parcel in) {
@@ -105,8 +103,8 @@ public final class HabitRecord implements Parcelable {
     };
 
     public HabitRecord copy() {
-        return new HabitRecord(userId, createdAt, name, color, target, resetFreq, resetTimestamp,
-                reminderHour, reminderMin, score, checkmarks);
+        return new HabitRecord(
+                new HabitRecordParameterObject(userId, createdAt, name, color, target, resetFreq, resetTimestamp, reminderHour, reminderMin, score, checkmarks));
     }
 
     public String getUserId() {
