@@ -86,6 +86,10 @@ public final class HabitList {
                 Collections.sort(mHabits, new SortByDate());
                 Collections.reverse(mHabits);
                 break;
+            //default: sort by name
+            default:
+                Collections.sort(mHabits, new SortByName());
+                break;
         }
     }
 
