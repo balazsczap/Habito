@@ -19,12 +19,9 @@ public class ListProvider implements RemoteViewsService.RemoteViewsFactory {
 
     private List<Habit> mHabitList = new ArrayList<>();
     private Context mContext = null;
-    private int appWidgetId;
 
     public ListProvider(Context context, Intent intent) {
         this.mContext = context;
-        appWidgetId = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,
-                AppWidgetManager.INVALID_APPWIDGET_ID);
         populateListItem();
     }
 
@@ -79,14 +76,23 @@ public class ListProvider implements RemoteViewsService.RemoteViewsFactory {
         return true;
     }
 
+    /**
+     * Because ListProvider implements RemoteViewsService.RemoteViewsFactory
+     */
     @Override
     public void onCreate() {
     }
 
+    /**
+     * Because ListProvider implements RemoteViewsService.RemoteViewsFactory
+     */
     @Override
     public void onDataSetChanged() {
     }
 
+    /**
+     * Because ListProvider implements RemoteViewsService.RemoteViewsFactory
+     */
     @Override
     public void onDestroy() {
     }
