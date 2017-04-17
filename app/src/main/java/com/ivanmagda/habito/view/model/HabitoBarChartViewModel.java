@@ -10,7 +10,6 @@ import com.ivanmagda.habito.barchart.formatters.HabitoBaseIAxisValueFormatter;
 import com.ivanmagda.habito.barchart.formatters.MonthAxisValueFormatter;
 import com.ivanmagda.habito.barchart.formatters.WeekDayAxisValueFormatter;
 import com.ivanmagda.habito.barchart.formatters.YearAxisValueFormatter;
-import com.ivanmagda.habito.models.Habit;
 import com.ivanmagda.habito.utils.HabitoStringUtils;
 
 public class HabitoBarChartViewModel {
