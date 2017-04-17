@@ -22,6 +22,7 @@ android:
     - extra-google-m2repository
     - extra-android-support
     - android-25
+    - android-22
     - sys-img-armeabi-v7a-android-22
     
 jdk:
