@@ -1,7 +1,5 @@
 language: android
 
-jdk:
-  - oraclejdk8
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -15,14 +13,14 @@ android:
   components:
     - tools
     - build-tools-25.0.2
-    - android-25
     - platform-tools
     - extra-android-m2repository
     - extra-google-android-support
-  licenses:
-    - 'android-sdk-preview-license-.+'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
+    - extra-google-m2repository
+    - extra-android-support
+    - android-25
+jdk:
+  - oraclejdk8
 
 notifications:
   email: false
