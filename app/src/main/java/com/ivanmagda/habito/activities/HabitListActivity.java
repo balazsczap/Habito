@@ -167,7 +167,7 @@ public class HabitListActivity extends AppCompatActivity implements HabitsAdapte
     }
 
     @OnClick(R.id.fab)
-    void onAddClick() {
+    protected void onAddClick() {
         createHabit();
     }
 

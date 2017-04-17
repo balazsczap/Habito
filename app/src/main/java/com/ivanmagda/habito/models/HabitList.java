@@ -42,10 +42,6 @@ public final class HabitList {
         sort();
     }
 
-    public HabitList(List<Habit> habits) {
-        this(habits, SortOrder.NAME);
-    }
-
     public List<Habit> getHabits() {
         return mHabits;
     }

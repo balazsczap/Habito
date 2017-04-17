@@ -127,9 +127,8 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
 
 
             /**
-             * The Adapter has to implement onNothingSelected.
+             * Because EditHabitActivity implements OnItemSelectedListener
              *
-             * Empty method body
              */
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -175,6 +174,9 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
                 nameEditText.setTextColor(color);
             }
 
+            /**
+             * Needed for ColorPicker.OnChooseColorListener
+             */
             @Override
             public void onCancel() {
             }

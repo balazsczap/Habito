@@ -52,7 +52,7 @@ public class DetailHabitActivity extends AppCompatActivity
     protected Spinner dateRangeSpinner;
 
     @BindView(R.id.tv_date_range)
-    TextView dateRangeTextView;
+    protected TextView dateRangeTextView;
 
     private Habit mHabit;
     private HabitoBarChartConfigurator mBarChartConfigurator;
@@ -192,6 +192,9 @@ public class DetailHabitActivity extends AppCompatActivity
         }
     }
 
+    /**
+     * Because DetailHabitActivity implements OnItemSelectedListener
+     */
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
     }
