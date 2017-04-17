@@ -54,16 +54,16 @@ public class HabitListActivity extends AppCompatActivity implements HabitsAdapte
     private static final int RC_SIGN_IN = 10;
 
     @BindView(R.id.rv_habits)
-    RecyclerView mRecyclerView;
+    protected RecyclerView mRecyclerView;
 
     @BindView(R.id.empty_view)
-    TextView emptyView;
+    protected TextView emptyView;
 
     @BindView(R.id.fab)
-    FloatingActionButton floatingActionButton;
+    protected FloatingActionButton floatingActionButton;
 
     @BindView(R.id.progress_bar)
-    ProgressBar progressBar;
+    protected ProgressBar progressBar;
 
     private HabitsAdapter mHabitsAdapter;
 
