@@ -19,7 +19,6 @@ import java.util.List;
 public class WidgetFetchService extends Service {
 
     private int appWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
-    private Query mUserHabitsQuery;
     private ValueEventListener mValueEventListener;
     public static List<Habit> habitList = new ArrayList<>();
 
@@ -39,7 +38,7 @@ public class WidgetFetchService extends Service {
     }
 
     private void fetchData() {
-        mUserHabitsQuery = FirebaseSyncUtils.getCurrentUserHabitsQuery();
+        Query mUserHabitsQuery = FirebaseSyncUtils.getCurrentUserHabitsQuery();
         if (mUserHabitsQuery == null) {
             populateWidget();
         } else {
