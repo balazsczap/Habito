@@ -45,16 +45,16 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
     private static final String TAG = "EditHabitActivity";
 
     @BindView(R.id.et_habit_name)
-    EditText nameEditText;
+    protected EditText nameEditText;
 
     @BindView(R.id.spinner_reset)
-    Spinner resetFrequencySpinner;
+    protected Spinner resetFrequencySpinner;
 
     @BindView(R.id.et_habit_target)
-    EditText targetEditText;
+    protected EditText targetEditText;
 
     @BindView(R.id.tv_reminder_time)
-    TextView reminderTimeTextView;
+    protected TextView reminderTimeTextView;
 
     /**
      * The original habit.
@@ -127,6 +127,12 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
                 mEditingHabit.getRecord().setResetFreq(selected);
             }
 
+
+            /**
+             * The Adapter has to implement onNothingSelected.
+             *
+             * Empty method body
+             */
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
             }
@@ -145,7 +151,7 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
     }
 
     @OnClick(R.id.tv_reminder_time)
-    void onDateSpinnerClick() {
+    protected void onDateSpinnerClick() {
         TimePickerFragment timePickerFragment;
         if (mEditingHabit.isReminderOn()) {
             HabitRecord record = mEditingHabit.getRecord();
@@ -159,7 +165,7 @@ public class EditHabitActivity extends AppCompatActivity implements TimePickerFr
     }
 
     @OnClick(R.id.bt_pick_color)
-    void showColorPicker() {
+    protected void showColorPicker() {
         ColorPicker colorPicker = new ColorPicker(this);
         colorPicker.setDefaultColorButton(mEditingHabit.getRecord().getColor());
         colorPicker.getPositiveButton().setTextColor(getResources().getColor(R.color.colorAccent));
