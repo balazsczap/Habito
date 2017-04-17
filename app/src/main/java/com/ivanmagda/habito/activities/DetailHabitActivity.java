@@ -45,13 +45,13 @@ public class DetailHabitActivity extends AppCompatActivity
     private static final int RC_EDIT_HABIT = 1234;
 
     @BindView(R.id.bar_chart)
-    BarChart barChart;
+    protected BarChart barChart;
 
     @BindView(R.id.tv_score)
-    TextView scoreTextView;
+    protected TextView scoreTextView;
 
     @BindView(R.id.sp_date_range)
-    Spinner dateRangeSpinner;
+    protected Spinner dateRangeSpinner;
 
     @BindView(R.id.tv_date_range)
     TextView dateRangeTextView;
@@ -140,14 +140,14 @@ public class DetailHabitActivity extends AppCompatActivity
     }
 
     @OnClick(R.id.bt_increase)
-    void onIncreaseScoreClick() {
+    protected void onIncreaseScoreClick() {
         final int oldScore = mHabit.getRecord().getScore();
         mHabit.increaseScore();
         updateScoreIfNeeded(oldScore);
     }
 
     @OnClick(R.id.bt_decrease)
-    void onDecreaseClick() {
+    protected void onDecreaseClick() {
         final int oldScore = mHabit.getRecord().getScore();
         mHabit.decreaseScore();
         updateScoreIfNeeded(oldScore);
