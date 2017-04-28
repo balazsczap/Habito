@@ -1,9 +1,5 @@
 package com.ivanmagda.habito.utils;
 
-import com.ivanmagda.habito.models.Habit;
-import com.ivanmagda.habito.models.HabitRecord;
-
-import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Calendar;
