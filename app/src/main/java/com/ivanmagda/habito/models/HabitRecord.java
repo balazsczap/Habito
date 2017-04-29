@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * When syncing with an Firebase Database DataSnapshot's should be parsed with this class.
  */
-public final class HabitRecord implements Parcelable {
+public class HabitRecord implements Parcelable {
 
     public static final int REMINDER_OFF = -1;
     public static final int DEFAULT_COLOR = Color.WHITE;
