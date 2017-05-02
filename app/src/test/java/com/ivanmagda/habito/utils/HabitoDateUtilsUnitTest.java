@@ -1,5 +1,6 @@
 package com.ivanmagda.habito.utils;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Calendar;
@@ -49,4 +50,69 @@ public class HabitoDateUtilsUnitTest {
         assertFalse(isWithinRange(toCheck, start, end));
     }
 
+    @Test
+    public void isDatesInSameMonth_True() {
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2010, 12, 2);
+
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2010, 12, 4);
+
+        Assert.assertTrue(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
+    }
+
+    @Test
+    public void isDatesInSameMonth_DifferentYear() {
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2010, 12, 2);
+
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2011, 12, 4);
+
+        Assert.assertFalse(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
+    }
+
+    @Test
+    public void isDatesInSameMonth_DifferentMonth() {
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2010, 12, 2);
+
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2010, 11, 2);
+
+        Assert.assertFalse(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
+    }
+
+    @Test
+    public void isDatesInSameWeek_True() {
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2017, 5, 2);
+
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2017, 5, 3);
+
+        Assert.assertTrue(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
+    }
+
+    @Test
+    public void isDatesInSameWeek_DifferentYear() {
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2017, 5, 2);
+
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2016, 5, 5);
+
+        Assert.assertFalse(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
+    }
+
+    @Test
+    public void isDatesInSameWeek_DifferentWeek() {
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2017, 5, 2);
+
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2017, 5, 11);
+
+        Assert.assertFalse(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
+    }
 }
