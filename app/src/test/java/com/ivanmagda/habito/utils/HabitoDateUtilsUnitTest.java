@@ -1,6 +1,5 @@
 package com.ivanmagda.habito.utils;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Calendar;
@@ -58,7 +57,7 @@ public class HabitoDateUtilsUnitTest {
         Calendar c2 = Calendar.getInstance();
         c2.set(2010, 12, 4);
 
-        assertTrue(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertTrue(isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
@@ -69,7 +68,7 @@ public class HabitoDateUtilsUnitTest {
         Calendar c2 = Calendar.getInstance();
         c2.set(2011, 12, 4);
 
-        assertFalse(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertFalse(isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
@@ -80,7 +79,7 @@ public class HabitoDateUtilsUnitTest {
         Calendar c2 = Calendar.getInstance();
         c2.set(2010, 11, 2);
 
-        assertFalse(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertFalse(isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
@@ -91,7 +90,7 @@ public class HabitoDateUtilsUnitTest {
         Calendar c2 = Calendar.getInstance();
         c2.set(2017, 5, 3);
 
-        assertTrue(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertTrue(isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
@@ -102,7 +101,7 @@ public class HabitoDateUtilsUnitTest {
         Calendar c2 = Calendar.getInstance();
         c2.set(2016, 5, 5);
 
-        assertFalse(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertFalse(isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
@@ -113,6 +112,6 @@ public class HabitoDateUtilsUnitTest {
         Calendar c2 = Calendar.getInstance();
         c2.set(2017, 5, 11);
 
-        assertFalse(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertFalse(isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 }
