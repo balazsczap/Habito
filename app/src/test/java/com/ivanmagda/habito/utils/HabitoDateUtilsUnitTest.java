@@ -51,68 +51,68 @@ public class HabitoDateUtilsUnitTest {
     }
 
     @Test
-    public void isDatesInSameMonth_True() {
+    public void isDatesInSameMonthTrue() {
         Calendar c1 = Calendar.getInstance();
         c1.set(2010, 12, 2);
 
         Calendar c2 = Calendar.getInstance();
         c2.set(2010, 12, 4);
 
-        Assert.assertTrue(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertTrue(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
-    public void isDatesInSameMonth_DifferentYear() {
+    public void isDatesInSameMonthDifferentYear() {
         Calendar c1 = Calendar.getInstance();
         c1.set(2010, 12, 2);
 
         Calendar c2 = Calendar.getInstance();
         c2.set(2011, 12, 4);
 
-        Assert.assertFalse(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertFalse(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
-    public void isDatesInSameMonth_DifferentMonth() {
+    public void isDatesInSameMonthDifferentMonth() {
         Calendar c1 = Calendar.getInstance();
         c1.set(2010, 12, 2);
 
         Calendar c2 = Calendar.getInstance();
         c2.set(2010, 11, 2);
 
-        Assert.assertFalse(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertFalse(HabitoDateUtils.isDatesInSameMonth(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
-    public void isDatesInSameWeek_True() {
+    public void isDatesInSameWeekTrue() {
         Calendar c1 = Calendar.getInstance();
         c1.set(2017, 5, 2);
 
         Calendar c2 = Calendar.getInstance();
         c2.set(2017, 5, 3);
 
-        Assert.assertTrue(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertTrue(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
-    public void isDatesInSameWeek_DifferentYear() {
+    public void isDatesInSameWeekDifferentYear() {
         Calendar c1 = Calendar.getInstance();
         c1.set(2017, 5, 2);
 
         Calendar c2 = Calendar.getInstance();
         c2.set(2016, 5, 5);
 
-        Assert.assertFalse(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertFalse(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 
     @Test
-    public void isDatesInSameWeek_DifferentWeek() {
+    public void isDatesInSameWeekDifferentWeek() {
         Calendar c1 = Calendar.getInstance();
         c1.set(2017, 5, 2);
 
         Calendar c2 = Calendar.getInstance();
         c2.set(2017, 5, 11);
 
-        Assert.assertFalse(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
+        assertFalse(HabitoDateUtils.isDatesInSameWeek(c1.getTimeInMillis(), c2.getTimeInMillis()));
     }
 }

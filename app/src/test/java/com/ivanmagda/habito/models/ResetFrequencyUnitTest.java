@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ResetFrequencyUnitTest {
     @Test
-    public void ResetFrequency_EmptyContructor() {
+    public void resetFrequencyEmptyConstructor() {
         ResetFrequency uud = new ResetFrequency();
 
         Assert.assertEquals(ResetFrequency.Type.NEVER, uud.getType());
@@ -13,7 +13,7 @@ public class ResetFrequencyUnitTest {
     }
 
     @Test
-    public void ResetFrequency_TypeConstructor() {
+    public void resetFrequencyTypeConstructor() {
         ResetFrequency uud = new ResetFrequency(ResetFrequency.Type.MONTH);
 
         Assert.assertEquals(ResetFrequency.Type.MONTH, uud.getType());
@@ -21,7 +21,7 @@ public class ResetFrequencyUnitTest {
     }
 
     @Test
-    public void ResetFrequency_StringConstructor() {
+    public void resetFrequencyStringConstructor() {
         ResetFrequency uud = new ResetFrequency(ResetFrequency.DAY);
 
         Assert.assertEquals(ResetFrequency.DAY, uud.getTypeName());
@@ -29,7 +29,7 @@ public class ResetFrequencyUnitTest {
     }
 
     @Test
-    public void ResetFrequency_SetType_WithType() {
+    public void resetFrequencySetTypeWithType() {
         ResetFrequency uud = new ResetFrequency(ResetFrequency.Type.WEEK);
         uud.setType(ResetFrequency.Type.YEAR);
 
@@ -39,7 +39,7 @@ public class ResetFrequencyUnitTest {
     }
 
     @Test
-    public void ResetFrequency_SetType_WithString() {
+    public void resetFrequencySetTypeWithString() {
         ResetFrequency uud = new ResetFrequency(ResetFrequency.WEEK);
         uud.setType(ResetFrequency.YEAR);
 
@@ -49,7 +49,7 @@ public class ResetFrequencyUnitTest {
     }
 
     @Test
-    public void ResetFrequency_StringFor() {
+    public void resetFrequencyStringFor() {
         Assert.assertEquals(ResetFrequency.DAY, ResetFrequency.stringFor(ResetFrequency.Type.DAY));
         Assert.assertEquals(ResetFrequency.MONTH, ResetFrequency.stringFor(ResetFrequency.Type.MONTH));
         Assert.assertEquals(ResetFrequency.YEAR, ResetFrequency.stringFor(ResetFrequency.Type.YEAR));
@@ -58,7 +58,7 @@ public class ResetFrequencyUnitTest {
     }
 
     @Test
-    public void ResetFrequency_TypeFor() {
+    public void resetFrequencyTypeFor() {
         Assert.assertEquals(ResetFrequency.Type.DAY, ResetFrequency.typeFrom(ResetFrequency.DAY));
         Assert.assertEquals(ResetFrequency.Type.WEEK, ResetFrequency.typeFrom(ResetFrequency.WEEK));
         Assert.assertEquals(ResetFrequency.Type.MONTH, ResetFrequency.typeFrom(ResetFrequency.MONTH));
@@ -66,8 +66,8 @@ public class ResetFrequencyUnitTest {
         Assert.assertEquals(ResetFrequency.Type.NEVER, ResetFrequency.typeFrom(ResetFrequency.NEVER));
 
         try {
-            ResetFrequency.Type t = ResetFrequency.typeFrom("test-invalid-input");
-            Assert.fail();
+            ResetFrequency.typeFrom("test-invalid-input");
+            Assert.fail("IllegalArgumentException expected");
         } catch (Exception e) {
             // Exception expected
         }

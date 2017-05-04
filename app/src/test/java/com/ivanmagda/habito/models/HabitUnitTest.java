@@ -1,11 +1,5 @@
 package com.ivanmagda.habito.models;
 
-import android.os.Parcel;
-
-import com.ivanmagda.habito.models.Habit;
-import com.ivanmagda.habito.models.HabitRecord;
-import com.ivanmagda.habito.models.ResetFrequency;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;

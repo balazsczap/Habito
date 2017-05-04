@@ -5,27 +5,27 @@ import org.junit.Test;
 
 public class HabitoStringUtilsUnitTest {
     @Test
-    public void HabitoStringUtils_NormalInput() {
+    public void HabitoStringUtilsNormalInput() {
         Assert.assertEquals("Unit-test", HabitoStringUtils.capitalized("unit-test"));
     }
 
     @Test
-    public void HabitoStringUtils_1LengthInput() {
+    public void HabitoStringUtils1LengthInput() {
         Assert.assertEquals("K", HabitoStringUtils.capitalized("k"));
     }
 
     @Test
-    public void HabitoStringUtils_CapitalizedInput() {
+    public void HabitoStringUtilsCapitalizedInput() {
         Assert.assertEquals("UNIT", HabitoStringUtils.capitalized("UNIT"));
     }
 
     @Test
-    public void HabitoStringUtils_EmptyInput() {
+    public void HabitoStringUtilsEmptyInput() {
         Assert.assertEquals("", HabitoStringUtils.capitalized(""));
     }
 
     @Test
-    public void HabitoStringUtils_NumberFirstCharInput() {
+    public void HabitoStringUtilsNumberFirstCharInput() {
         Assert.assertEquals("100% coverage", HabitoStringUtils.capitalized("100% coverage"));
     }
 }

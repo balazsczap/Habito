@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class ResetParameterObjectUnitTest {
     @Test
-    public void resetParameterObject_constructor_notNull() {
+    public void resetParameterObjectConstructorNotNull() {
         ResetParameterObject uud = new ResetParameterObject("reset", 1);
 
         Assert.assertEquals(uud.getResetFreq(), "reset");
@@ -13,7 +13,7 @@ public class ResetParameterObjectUnitTest {
     }
 
     @Test
-    public void resetParameterObject_constructor_null() {
+    public void resetParameterObjectConstructorNull() {
         ResetParameterObject uud = new ResetParameterObject(null, -1);
 
         Assert.assertNull(uud.getResetFreq());

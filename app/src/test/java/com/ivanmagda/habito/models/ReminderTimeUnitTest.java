@@ -9,7 +9,7 @@ import java.util.Date;
 public class ReminderTimeUnitTest {
 
     @Test
-    public void ReminderTime_Initialization() {
+    public void ReminderTimeInitialization() {
         ReminderTime uut = new ReminderTime(15, 23);
 
         Assert.assertEquals(15, uut.getHour());
@@ -17,7 +17,7 @@ public class ReminderTimeUnitTest {
     }
 
     @Test
-    public void ReminderTime_SetTime() {
+    public void ReminderTimeSetTime() {
         ReminderTime uut = new ReminderTime(15, 23);
         uut.setHour(8);
         uut.setMinutes(57);
@@ -30,14 +30,14 @@ public class ReminderTimeUnitTest {
     }
 
     @Test
-    public void ReminderTime_getTimeString() {
+    public void ReminderTimeGetTimeString() {
         ReminderTime uut = new ReminderTime(15, 23);
 
         Assert.assertEquals(ReminderTime.getTimeString(uut), ReminderTime.getTimeString(15, 23));
     }
 
     @Test
-    public void ReminderTime_getTodayReminderDate() {
+    public void ReminderTimeGetTodayReminderDate() {
         ReminderTime uut = new ReminderTime(15, 23);
         Date date = uut.getTodayReminderDate();
 
